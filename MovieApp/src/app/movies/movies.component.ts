@@ -9,7 +9,7 @@ import { MovieService } from "../movie.service";
 })
 export class MoviesComponent {
   title = 'Movie List';
-  movies: Movie[] = [];
+  movies:any;
   constructor(private movieService: MovieService) { };
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
@@ -17,8 +17,8 @@ export class MoviesComponent {
     this.getMovies();
   }
 
-  selectedMovie: Movie = new Movie(0, "asd","","");
-  onSelect(movie: Movie): void {
+  selectedMovie: any;
+  onSelect(movie: any): void {
     this.selectedMovie = movie;
   }
   getMovies(): void {
