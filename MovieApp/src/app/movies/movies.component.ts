@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Movie } from "../movie";
 import  {Movies} from "../movie.datasource";
 
 @Component({
@@ -7,6 +8,10 @@ import  {Movies} from "../movie.datasource";
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent{
- title = 'Movie List';
+ title =  'Movie List';
  movies=Movies;
+ selectedMovie : Movie = new Movie(1,"Movie 1");
+ onSelect(movie:Movie):void{
+  this.selectedMovie = movie;
+ }
 }
