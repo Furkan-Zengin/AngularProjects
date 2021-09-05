@@ -17,7 +17,7 @@ export class MoviesComponent {
     this.getMovies();
   }
 
-  selectedMovie: Movie = new Movie(0, "asd");
+  selectedMovie: Movie = new Movie(0, "asd","","");
   onSelect(movie: Movie): void {
     this.selectedMovie = movie;
   }
