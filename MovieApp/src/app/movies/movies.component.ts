@@ -10,11 +10,13 @@ import { MovieService } from "../movie.service";
 export class MoviesComponent {
   title = 'Movie List';
   movies:any;
+  movie1:Movie= new Movie();
   constructor(private movieService: MovieService) { };
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     this.getMovies();
+    this.onSelect(this.movie1);
   }
 
   selectedMovie: any;
