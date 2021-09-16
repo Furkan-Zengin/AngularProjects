@@ -12,7 +12,7 @@ export class ProductRepository{
   getProducts():Product[]{
     return this.products;
   }
-  // getProductsById(id:number): Product{
-  //   return this.products.find(p=>p.id == id);
-  // }
+  getProductById(id:number){
+    return this.products.find(p=>p.id === id);
+  }
 }

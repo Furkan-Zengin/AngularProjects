@@ -1,0 +1,11 @@
+<div class="bg-primary text-white m-2 p-2">
+  There Are {{model.getProducts().length}} prdocust in the app.
+</div>
+<div>
+  <h2> {{ product.name }} </h2>
+  <h2 [textContent]="product.name"></h2>
+
+  <img src="assets/img/{{ product.imageUrl }}" alt="">
+
+  <img [src]="'assets/img/'+product.imageUrl" alt="">
+</div>
